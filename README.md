@@ -33,8 +33,8 @@
 
 1. **Клонируйте репозиторий и установите зависимости:**
    ```bash
-   git clone <your-repo-url>
-   cd <repo-name>
+   git clone https://github.com/ogzeusily/mlops-pipeline-dvc-mlflow-airflow.git
+   cd mlops-pipeline-dvc-mlflow-airflow
    pip install -r requirements.txt
    ```
 
