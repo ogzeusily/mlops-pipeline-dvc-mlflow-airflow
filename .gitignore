@@ -1,0 +1,5 @@
+/customer_churn.csv
+/.vscode/*
+/mlruns/*
+/model_weights/*
+/.dvc/*
