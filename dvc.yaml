@@ -1,0 +1,18 @@
+stages:
+  data_load:
+    cmd: python data_loader.py
+    deps:
+      - data_loader.py
+      - customer_churn.csv
+    outs:
+      - data/test_data.csv
+      - data/train_data.csv
+
+  train:
+    cmd: python train_model.py
+    deps:
+      - train_model.py
+      - data/test_data.csv
+      - data/train_data.csv
+    outs:
+      - model_weights
