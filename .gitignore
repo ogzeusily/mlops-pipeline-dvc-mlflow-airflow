@@ -3,3 +3,5 @@
 /mlruns/*
 /model_weights/*
 /.dvc/*
+/tempCodeRunnerFile.py
+/.DS_Store
