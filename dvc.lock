@@ -1,0 +1,43 @@
+schema: '2.0'
+stages:
+  data_load:
+    cmd: python data_loader.py
+    deps:
+    - path: customer_churn.csv
+      hash: md5
+      md5: 0f9de68e012bd3aed5fa7cdc9fc421af
+      size: 977501
+    - path: data_loader.py
+      hash: md5
+      md5: 3b5620d0661e2dc7541f408e51fa32dc
+      size: 2360
+    outs:
+    - path: data/test_data.csv
+      hash: md5
+      md5: 2215a4432091bd5a9c4d8a45b8332cc9
+      size: 400641
+    - path: data/train_data.csv
+      hash: md5
+      md5: bb08b6c801a070f1cb84c8721856977e
+      size: 1197316
+  train:
+    cmd: python train_model.py
+    deps:
+    - path: data/test_data.csv
+      hash: md5
+      md5: 2215a4432091bd5a9c4d8a45b8332cc9
+      size: 400641
+    - path: data/train_data.csv
+      hash: md5
+      md5: bb08b6c801a070f1cb84c8721856977e
+      size: 1197316
+    - path: train_model.py
+      hash: md5
+      md5: 7de1bd5f4d890cc1d4ebf28b89dfe455
+      size: 5896
+    outs:
+    - path: model_weights
+      hash: md5
+      md5: e8d4a39d326503be488341dae6bc57b9.dir
+      size: 1844114
+      nfiles: 4
